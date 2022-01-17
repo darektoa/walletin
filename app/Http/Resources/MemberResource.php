@@ -18,7 +18,8 @@ class MemberResource extends JsonResource
             'id'            => $this->id,
             'balance'       => $this->balance,
             'created_at'    => $this->created_at,
-            'school'        => SchoolResource::make($this->whenLoaded('school'))
+            'school'        => SchoolResource::make($this->whenLoaded('school')),
+            'role'          => MemberRoleResource::make($this->whenLoaded('role')),
         ];
     }
 }
