@@ -30,6 +30,11 @@ class User extends Authenticatable
     }
 
 
+    public function tokens() {
+        return $this->morphMany(PersonalAccessToken::class, 'tokenable');
+    }
+
+
     public function member() {
         return $this->hasOne(Member::class);
     }
