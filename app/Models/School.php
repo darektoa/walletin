@@ -15,4 +15,9 @@ class School extends Model
     public function user() {
         return $this->belongsTo(User::class);
     }
+
+
+    public function merchants() {
+        return $this->hasMany(Merchant::class);
+    }
 }
