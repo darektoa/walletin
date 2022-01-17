@@ -20,4 +20,9 @@ class Merchant extends Model
     public function school() {
         return $this->belongsTo(School::class);
     }
+
+
+    public function products() {
+        return $this->hasMany(MerchantProduct::class);
+    }
 }
