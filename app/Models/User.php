@@ -27,4 +27,9 @@ class User extends Authenticatable
     public function school() {
         return $this->hasOne(School::class);
     }
+
+
+    public function member() {
+        return $this->hasOne(Member::class);
+    }
 }
