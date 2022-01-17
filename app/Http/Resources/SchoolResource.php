@@ -19,6 +19,7 @@ class SchoolResource extends JsonResource
             'code'          => $this->code,
             'created_at'    => $this->created_at,
             'members'       => MemberResource::collection($this->whenLoaded('members')),
+            'merchants'     => MerchantResource::collection($this->whenLoaded('merchants')),
         ];
     }
 }
