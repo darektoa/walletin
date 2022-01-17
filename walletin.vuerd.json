@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 4000,
     "height": 4000,
-    "scrollTop": -973,
-    "scrollLeft": -1240,
-    "zoomLevel": 0.6,
+    "scrollTop": -570,
+    "scrollLeft": -638,
+    "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -235,7 +235,7 @@
           "active": false,
           "left": 1625.6663,
           "top": 900.9999,
-          "zIndex": 106,
+          "zIndex": 1,
           "widthName": 60,
           "widthComment": 60
         },
@@ -389,7 +389,7 @@
           "active": false,
           "left": 1143.4166,
           "top": 1291.1115,
-          "zIndex": 146,
+          "zIndex": 6,
           "widthName": 145.0888671875,
           "widthComment": 60
         },
@@ -635,7 +635,7 @@
           "active": false,
           "left": 1629.6781,
           "top": 1234.4134,
-          "zIndex": 140,
+          "zIndex": 3,
           "widthName": 72.0908203125,
           "widthComment": 60
         },
@@ -789,7 +789,7 @@
           "active": false,
           "left": 2115.1378,
           "top": 534.8335,
-          "zIndex": 140,
+          "zIndex": 4,
           "widthName": 60,
           "widthComment": 60
         },
@@ -966,7 +966,7 @@
           "active": false,
           "left": 2113.333,
           "top": 1274.3042,
-          "zIndex": 139,
+          "zIndex": 2,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1120,7 +1120,7 @@
           "active": false,
           "left": 1135.7771,
           "top": 535.834,
-          "zIndex": 152,
+          "zIndex": 7,
           "widthName": 62.68994140625,
           "widthComment": 60
         },
@@ -1251,7 +1251,7 @@
           "active": false,
           "left": 2648.9116,
           "top": 1294.1067,
-          "zIndex": 140,
+          "zIndex": 5,
           "widthName": 85.08447265625,
           "widthComment": 60
         },
@@ -1355,7 +1355,7 @@
             "id": "80ce4e71-d55e-4795-942b-6550147f0a99"
           },
           {
-            "name": "quantity",
+            "name": "stock",
             "comment": "",
             "dataType": "SMALLINT(20)",
             "default": "",
@@ -1448,10 +1448,10 @@
           }
         ],
         "ui": {
-          "active": false,
+          "active": true,
           "left": 595.2492,
           "top": 514.4163,
-          "zIndex": 156,
+          "zIndex": 12,
           "widthName": 113.28076171875,
           "widthComment": 60
         },
