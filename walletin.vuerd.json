@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 4000,
     "height": 4000,
-    "scrollTop": -693,
-    "scrollLeft": -980,
-    "zoomLevel": 0.8,
+    "scrollTop": -973,
+    "scrollLeft": -1240,
+    "zoomLevel": 0.6,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -1118,9 +1118,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1136.5271,
-          "top": 545.084,
-          "zIndex": 148,
+          "left": 1135.7771,
+          "top": 535.834,
+          "zIndex": 152,
           "widthName": 62.68994140625,
           "widthComment": 60
         },
@@ -1259,7 +1259,7 @@
         "id": "201079e1-8869-416f-98b2-16d4dcac6481"
       },
       {
-        "name": "products",
+        "name": "merchant_products",
         "comment": "",
         "columns": [
           {
@@ -1449,10 +1449,10 @@
         ],
         "ui": {
           "active": false,
-          "left": 596.2492,
-          "top": 525.4163,
-          "zIndex": 149,
-          "widthName": 60,
+          "left": 595.2492,
+          "top": 514.4163,
+          "zIndex": 156,
+          "widthName": 113.28076171875,
           "widthComment": 60
         },
         "visible": true,
@@ -1640,8 +1640,8 @@
           "columnIds": [
             "7afcaa2d-dfc9-4450-9d3f-d278b2b42c44"
           ],
-          "x": 1525.53930703125,
-          "y": 593.084,
+          "x": 1524.78930703125,
+          "y": 583.834,
           "direction": "right"
         },
         "constraintName": "fk_users_to_merchants",
@@ -1666,8 +1666,8 @@
           "columnIds": [
             "98892484-f125-48b7-bf4b-f9e523c1aa0e"
           ],
-          "x": 1525.53930703125,
-          "y": 689.084,
+          "x": 1524.78930703125,
+          "y": 679.834,
           "direction": "right"
         },
         "constraintName": "fk_schools_to_merchants",
@@ -1709,8 +1709,8 @@
           "columnIds": [
             "24b93482-2ae5-467a-966e-32e993064f8d"
           ],
-          "x": 1136.5271,
-          "y": 641.084,
+          "x": 1135.7771,
+          "y": 631.834,
           "direction": "left"
         },
         "end": {
@@ -1718,8 +1718,8 @@
           "columnIds": [
             "b5953cb2-2186-4068-b058-240a771303ec"
           ],
-          "x": 991.73601640625,
-          "y": 641.9163,
+          "x": 990.73601640625,
+          "y": 630.9163,
           "direction": "right"
         },
         "constraintName": "fk_merchants_to_products",
