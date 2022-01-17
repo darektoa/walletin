@@ -18,7 +18,7 @@ class CreateMerchantProductsTable extends Migration
             $table->foreignId('merchant_id')->constrained();
             $table->string('name');
             $table->bigInteger('price');
-            $table->smallInteger('quantity');
+            $table->smallInteger('stock');
             $table->softDeletes();
             $table->timestamps();
         });
