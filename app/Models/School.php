@@ -17,6 +17,11 @@ class School extends Model
     }
 
 
+    public function members() {
+        return $this->hasMany(Member::class);
+    }
+
+
     public function merchants() {
         return $this->hasMany(Merchant::class);
     }
