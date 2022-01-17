@@ -963,7 +963,7 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 2113.333,
           "top": 1274.3042,
           "zIndex": 139,
@@ -972,6 +972,137 @@
         },
         "visible": true,
         "id": "0be66462-8d13-4385-8886-af1be23a6c59"
+      },
+      {
+        "name": "merchants",
+        "comment": "",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "",
+            "dataType": "BIGINT(20)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 68.45361328125,
+              "widthDefault": 60
+            },
+            "id": "24b93482-2ae5-467a-966e-32e993064f8d"
+          },
+          {
+            "name": "user_id",
+            "comment": "",
+            "dataType": "BIGINT(20)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 68.45361328125,
+              "widthDefault": 60
+            },
+            "id": "7afcaa2d-dfc9-4450-9d3f-d278b2b42c44"
+          },
+          {
+            "name": "school_id",
+            "comment": "",
+            "dataType": "BIGINT(20)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 68.45361328125,
+              "widthDefault": 60
+            },
+            "id": "98892484-f125-48b7-bf4b-f9e523c1aa0e"
+          },
+          {
+            "name": "created_at",
+            "comment": "",
+            "dataType": "TIMESTAMP",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 63.4326171875,
+              "widthComment": 60,
+              "widthDataType": 76.87060546875,
+              "widthDefault": 60
+            },
+            "id": "47b9cb80-04c6-4af1-8f6f-f41b21eb27ed"
+          },
+          {
+            "name": "updated_at",
+            "comment": "",
+            "dataType": "TIMESTAMP",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 67.0634765625,
+              "widthComment": 60,
+              "widthDataType": 76.87060546875,
+              "widthDefault": 60
+            },
+            "id": "b6de452f-3bdc-4820-aaaf-15e6d648a555"
+          }
+        ],
+        "ui": {
+          "active": true,
+          "left": 1154.5271,
+          "top": 550.334,
+          "zIndex": 139,
+          "widthName": 62.68994140625,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "1097acf6-72bd-4205-8489-f3bfe230826b"
       }
     ],
     "indexes": []
@@ -1136,6 +1267,58 @@
         "constraintName": "fk_schools_to_members",
         "visible": true,
         "id": "b21d55f8-8094-4b28-a392-631f0bd7b250"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneOnly",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "43dab476-8250-4d51-ac30-4b253655e01b",
+          "columnIds": [
+            "d10e8af3-5c99-4362-a747-699e5db93d2c"
+          ],
+          "x": 1625.6663,
+          "y": 1075.7499,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "1097acf6-72bd-4205-8489-f3bfe230826b",
+          "columnIds": [
+            "7afcaa2d-dfc9-4450-9d3f-d278b2b42c44"
+          ],
+          "x": 1525.46118203125,
+          "y": 593.209,
+          "direction": "right"
+        },
+        "constraintName": "fk_users_to_merchants",
+        "visible": true,
+        "id": "cd8d16d8-33df-4de3-a5b7-9b8adf9725cd"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "d92d06c5-c266-4508-a54b-100cc1784015",
+          "columnIds": [
+            "6ea9e7ff-b819-4331-a535-6e1c9c64c799"
+          ],
+          "x": 2115.1378,
+          "y": 678.8335,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "1097acf6-72bd-4205-8489-f3bfe230826b",
+          "columnIds": [
+            "98892484-f125-48b7-bf4b-f9e523c1aa0e"
+          ],
+          "x": 1525.46118203125,
+          "y": 678.959,
+          "direction": "right"
+        },
+        "constraintName": "fk_schools_to_merchants",
+        "visible": true,
+        "id": "55be08f7-e394-418a-8308-4fc2c1b4564f"
       }
     ]
   }
