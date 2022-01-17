@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Http\Resources\UserResource;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\{Hash, Validator};
+use Illuminate\Support\Facades\{Auth, Hash, Validator};
 
 class AuthController extends Controller
 {
@@ -34,6 +34,40 @@ class AuthController extends Controller
 
             $token       = $user->createToken('user');
             $user->token = $token->plainTextToken;
+
+            return ResponseHelper::make(
+                UserResource::make($user)
+            );
+        }catch(Error $err) {
+            return ResponseHelper::error(
+                $err->getErrors(),
+                $err->getMessage(),
+                $err->getCode(),
+            );
+        }
+    }
+
+
+    public function login(Request $request) {
+        try{
+            $email      = $request->email;
+            $password   = $request->password;
+            $account    = User::where('email', '=', $email)
+                ->orWhere('username', '=', $email)
+                ->first();
+
+            if(!$account) throw new Error('Not found', 404, [
+                "Account doesn't exist"
+            ]);
+
+            if(!(
+                Auth::attempt(['email' => $email, 'password' => $password]) ||
+                Auth::attempt(['username' => $email, 'password' => $password])
+            )) throw new Error('Unauthorized', 401, ["Account doesn't match"]);
+
+            $user           = User::find(auth()->id());
+            $token          = $user->createToken('user');
+            $user->token    = $token->plainTextToken;
 
             return ResponseHelper::make(
                 UserResource::make($user)
