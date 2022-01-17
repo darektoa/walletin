@@ -6,6 +6,7 @@ use App\Exceptions\ErrorException as Error;
 use App\Helpers\{ResponseHelper, UsernameHelper};
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Http\Resources\UserResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\{Hash, Validator};
 
@@ -34,7 +35,9 @@ class AuthController extends Controller
             $token       = $user->createToken('user');
             $user->token = $token->plainTextToken;
 
-            return ResponseHelper::make($user);
+            return ResponseHelper::make(
+                UserResource::make($user)
+            );
         }catch(Error $err) {
             return ResponseHelper::error(
                 $err->getErrors(),
