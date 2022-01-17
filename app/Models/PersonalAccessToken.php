@@ -8,4 +8,9 @@ use Laravel\Sanctum\PersonalAccessToken as SanctumPersonalAccessToken;
 class PersonalAccessToken extends SanctumPersonalAccessToken
 {
     use HasFactory;
+
+
+    public function tokenable() {
+        return $this->morphTo();
+    }
 }
