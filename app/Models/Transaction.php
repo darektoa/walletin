@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Helpers\RandomCodeHelper;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,6 +11,19 @@ class Transaction extends Model
     use HasFactory;
 
     protected $guarded  = ['id'];
+
+
+    static protected function boot() {
+        parent::boot();
+
+        parent::creating(function($model) {
+            $code = RandomCodeHelper::make();
+            $code = "WLT$code";
+            $code = strtoupper($code);
+
+            $model->code = $code;
+        });
+    }
 
 
     public function sender() {
