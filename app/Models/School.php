@@ -17,7 +17,8 @@ class School extends Model
         parent::boot();
 
         parent::creating(function($model) {
-            $model->code = RandomCodeHelper::make();
+            if(!$model->code)
+                $model->code = RandomCodeHelper::make();
         });
     }
 
