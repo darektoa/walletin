@@ -37,4 +37,18 @@ class Transaction extends Model
 
         return $name;
     }
+
+
+    public function getTypeName() {
+        $type   = $this->type;
+        $name   = null;
+
+        switch($type) {
+            case 1: $name = 'Topup'; break;
+            case 2: $name = 'Buy'; break;
+            case 3: $name = 'Transfer'; break;
+        }
+
+        return $name;
+    }
 }
