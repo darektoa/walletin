@@ -10,6 +10,10 @@ class Transaction extends Model
 {
     use HasFactory;
 
+    protected $casts    = [
+        'detail'    => 'object',
+    ];
+
     protected $guarded  = ['id'];
 
 
