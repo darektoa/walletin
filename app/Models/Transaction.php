@@ -45,7 +45,7 @@ class Transaction extends Model
     }
 
 
-    public function getStatusName() {
+    public function getStatusNameAttribute() {
         $status = $this->status;
         $name   = null;
 
@@ -62,7 +62,7 @@ class Transaction extends Model
     }
 
 
-    public function getTypeName() {
+    public function getTypeNameAttribute() {
         $type   = $this->type;
         $name   = null;
 
