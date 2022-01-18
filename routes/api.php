@@ -22,5 +22,9 @@ Route::middleware(['auth.api'])->group(function() {
     // MEMBER
     Route::prefix('/member')->group(function() {
         Route::post('/join', [MemberControler::class, 'store']);
+
+        Route::middleware('member.api')->group(function() {
+            Route::post('/topup', [TransactionController::class, 'topup']);
+        });
     });
 });
