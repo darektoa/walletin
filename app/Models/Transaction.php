@@ -17,7 +17,7 @@ class Transaction extends Model
         parent::boot();
 
         parent::creating(function($model) {
-            $code = RandomCodeHelper::make();
+            $code = RandomCodeHelper::make(10);
             $code = "WLT$code";
             $code = strtoupper($code);
 
