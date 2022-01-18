@@ -17,6 +17,7 @@ class CreateTransactionsTable extends Migration
             $table->id();
             $table->foreignId('sender_id')->nullable()->constrained('users');
             $table->foreignId('receiver_id')->constrained('users');
+            $table->foreignId('school_id')->constrained();
             $table->string('code', 16)->unique();
             $table->bigInteger('amount');
             $table->smallInteger('status')->default(1);
