@@ -24,6 +24,7 @@ class UserResource extends JsonResource
             'updated_at'    => $this->updated_at,
             'school'        => SchoolResource::make($this->whenLoaded('school')),
             'member'        => MemberResource::make($this->whenLoaded('member')),
+            'merchant'      => MerchantResource::make($this->whenLoaded('merchant')),
         ];
     }
 }
