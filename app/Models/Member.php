@@ -25,4 +25,18 @@ class Member extends Model
     public function role() {
         return $this->belongsTo(MemberRole::class);
     }
+
+
+    public function scopeJoinSchool($query, $user, $school) {
+        $member = $query->firstOrCreate(
+            ['user_id' => $user->id, 'school_id' => $school->id], 
+            ['role_id' => 1], // Student
+        );
+
+        Member::where('user_id', $user->id)
+            ->where('school_id', '!=', $school->id)
+            ->delete();
+
+        return $member;
+    }
 }

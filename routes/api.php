@@ -15,7 +15,12 @@ Route::prefix('auth')->group(function() {
 // WITH AUTHENTICATION
 Route::middleware(['auth.api'])->group(function() {
     // SCHOOL
-    Route::prefix('school')->group(function() {
+    Route::prefix('/school')->group(function() {
         Route::post('/create', [SchoolController::class, 'store']);
+    });
+
+    // MEMBER
+    Route::prefix('/member')->group(function() {
+        Route::post('/create', [MemberControler::class, 'store']);
     });
 });
