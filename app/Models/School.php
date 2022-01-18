@@ -35,4 +35,9 @@ class School extends Model
     public function merchants() {
         return $this->hasMany(Merchant::class);
     }
+
+
+    public function scopeFindCode($query, $code) {
+        return $query->whereCode($code)->first();
+    }
 }
