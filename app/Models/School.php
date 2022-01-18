@@ -38,6 +38,11 @@ class School extends Model
     }
 
 
+    public function transactions() {
+        return $this->hasMany(Transaction::class);
+    }
+
+
     public function scopeFindCode($query, $code) {
         return $query->whereCode($code)->first();
     }
