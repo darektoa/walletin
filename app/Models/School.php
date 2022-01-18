@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Helpers\RandomCodeHelper;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,6 +11,15 @@ class School extends Model
     use HasFactory;
 
     protected $guarded  = ['id'];
+
+
+    static protected function boot() {
+        parent::boot();
+
+        parent::creating(function($model) {
+            $model->code = RandomCodeHelper::make();
+        });
+    }
 
 
     public function user() {
