@@ -15,12 +15,11 @@ class SchoolController extends Controller
         try{
             $user  = User::find(auth()->id());
 
-            $user->school()->firstOrCreate([], [
-                'code'  => RandomCodeHelper::make()
-            ]);
+            $user->school()->firstOrCreate();
+            $user->load(['school']);
 
             return ResponseHelper::make(
-                UserResource::make($user->load(['school']))
+                UserResource::make($user)
             );
         }catch(Error $err) {
             return ResponseHelper::error(
