@@ -21,7 +21,7 @@ class CreateTransactionsTable extends Migration
             $table->bigInteger('amount');
             $table->smallInteger('status')->default(1);
             $table->smallInteger('type');
-            $table->json('detail');
+            $table->json('detail')->nullable();
             $table->timestamps();
         });
     }
