@@ -17,7 +17,7 @@ class SchoolSeeder extends Seeder
             'password'  => Hash::make('password'),
         ]);
 
-        $user->school()->create();
+        $user->school()->create(['code' => '928e0306']);
         $user->tokens()->create([
             'name'      => 'user',
             'abilities' => ['*'],
