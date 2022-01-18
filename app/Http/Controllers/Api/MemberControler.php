@@ -6,7 +6,7 @@ use App\Exceptions\ErrorException as Error;
 use App\Helpers\ResponseHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\UserResource;
-use App\Models\{School, User};
+use App\Models\{Member, School, User};
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -27,15 +27,14 @@ class MemberControler extends Controller
             $school = School::findCode($code);
             $user   = User::find(auth()->id());
 
-            $user->member()->firstOrCreate([], [
-                'school_id' => $school->id,
-                'role_id'   => 1 // Student
+            Member::joinSchool($user, $school);
+            
+            $user->load([
+                'member.school'
             ]);
 
             return ResponseHelper::make(
-                UserResource::make($user->load([
-                    'member.school'
-                ]))
+                UserResource::make($user)
             );
         }catch(Error $err) {
             return ResponseHelper::error(
