@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 4000,
     "height": 4000,
-    "scrollTop": -570,
-    "scrollLeft": -638,
-    "zoomLevel": 0.9,
+    "scrollTop": -326,
+    "scrollLeft": -1170,
+    "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -387,9 +387,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1143.4166,
-          "top": 1291.1115,
-          "zIndex": 6,
+          "left": 1142.1669,
+          "top": 1289.8617,
+          "zIndex": 83,
           "widthName": 145.0888671875,
           "widthComment": 60
         },
@@ -468,6 +468,29 @@
               "widthDefault": 60
             },
             "id": "060b979f-44fa-47df-a09a-d1d6fb524525"
+          },
+          {
+            "name": "school_id",
+            "comment": "",
+            "dataType": "BIGINT(20)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 68.45361328125,
+              "widthDefault": 60
+            },
+            "id": "b5dd2ab0-c7cc-4b9b-a56b-8f3c4848e9cf"
           },
           {
             "name": "code",
@@ -633,9 +656,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1629.6781,
-          "top": 1234.4134,
-          "zIndex": 3,
+          "left": 1627.2975,
+          "top": 153.461,
+          "zIndex": 86,
           "widthName": 72.0908203125,
           "widthComment": 60
         },
@@ -787,9 +810,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 2115.1378,
-          "top": 534.8335,
-          "zIndex": 4,
+          "left": 2115.1369,
+          "top": 534.8341,
+          "zIndex": 61,
           "widthName": 60,
           "widthComment": 60
         },
@@ -964,9 +987,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 2113.333,
-          "top": 1274.3042,
-          "zIndex": 2,
+          "left": 2115.3975,
+          "top": 1265.1935,
+          "zIndex": 95,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1118,9 +1141,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1135.7771,
-          "top": 535.834,
-          "zIndex": 7,
+          "left": 1135.8586,
+          "top": 552.7987,
+          "zIndex": 82,
           "widthName": 62.68994140625,
           "widthComment": 60
         },
@@ -1249,9 +1272,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 2648.9116,
-          "top": 1294.1067,
-          "zIndex": 5,
+          "left": 2631.308,
+          "top": 1284.2814,
+          "zIndex": 94,
           "widthName": 85.08447265625,
           "widthComment": 60
         },
@@ -1448,10 +1471,10 @@
           }
         ],
         "ui": {
-          "active": true,
-          "left": 595.2492,
-          "top": 514.4163,
-          "zIndex": 12,
+          "active": false,
+          "left": 610.0948,
+          "top": 532.3335,
+          "zIndex": 81,
           "widthName": 113.28076171875,
           "widthComment": 60
         },
@@ -1484,8 +1507,8 @@
           "columnIds": [
             "981142ba-3568-4dd2-95b0-62c1320f8def"
           ],
-          "x": 1525.1988265625,
-          "y": 1387.1115,
+          "x": 1523.9491265625,
+          "y": 1385.8617,
           "direction": "right"
         },
         "constraintName": "fk_users_to_personal_access_tokens",
@@ -1502,17 +1525,17 @@
             "d10e8af3-5c99-4362-a747-699e5db93d2c"
           ],
           "x": 1722.9193517578126,
-          "y": 1133.9999,
-          "direction": "bottom"
+          "y": 900.9999,
+          "direction": "top"
         },
         "end": {
           "tableId": "450dfa4c-9d8f-4f39-be56-832c34abfea2",
           "columnIds": [
             "ae0c0b04-52aa-4a6f-8746-c1c429724e35"
           ],
-          "x": 1916.014769921875,
-          "y": 1234.4134,
-          "direction": "top"
+          "x": 1722.743056640625,
+          "y": 447.961,
+          "direction": "bottom"
         },
         "constraintName": "fk_users_to_transactions",
         "visible": true,
@@ -1528,17 +1551,17 @@
             "d10e8af3-5c99-4362-a747-699e5db93d2c"
           ],
           "x": 1917.4254552734376,
-          "y": 1133.9999,
-          "direction": "bottom"
+          "y": 900.9999,
+          "direction": "top"
         },
         "end": {
           "tableId": "450dfa4c-9d8f-4f39-be56-832c34abfea2",
           "columnIds": [
             "060b979f-44fa-47df-a09a-d1d6fb524525"
           ],
-          "x": 1725.123656640625,
-          "y": 1234.4134,
-          "direction": "top"
+          "x": 1913.634169921875,
+          "y": 447.961,
+          "direction": "bottom"
         },
         "constraintName": "fk_users_to_transactions",
         "visible": true,
@@ -1562,8 +1585,8 @@
           "columnIds": [
             "35ad6037-de36-4b0f-90a1-79f2f4b20323"
           ],
-          "x": 2115.1378,
-          "y": 582.8335,
+          "x": 2115.1369,
+          "y": 630.8341,
           "direction": "left"
         },
         "constraintName": "fk_users_to_schools",
@@ -1588,8 +1611,8 @@
           "columnIds": [
             "f1e1d997-03de-41ec-b296-b61082f965bb"
           ],
-          "x": 2113.333,
-          "y": 1380.5542,
+          "x": 2115.3975,
+          "y": 1371.4435,
           "direction": "left"
         },
         "constraintName": "fk_users_to_members",
@@ -1605,8 +1628,8 @@
           "columnIds": [
             "6ea9e7ff-b819-4331-a535-6e1c9c64c799"
           ],
-          "x": 2300.604841015625,
-          "y": 726.8335,
+          "x": 2300.603941015625,
+          "y": 726.8341,
           "direction": "bottom"
         },
         "end": {
@@ -1614,8 +1637,8 @@
           "columnIds": [
             "aa3b22fa-a04c-4447-a690-32532bffeeb0"
           ],
-          "x": 2298.800041015625,
-          "y": 1274.3042,
+          "x": 2300.864541015625,
+          "y": 1265.1935,
           "direction": "top"
         },
         "constraintName": "fk_schools_to_members",
@@ -1640,8 +1663,8 @@
           "columnIds": [
             "7afcaa2d-dfc9-4450-9d3f-d278b2b42c44"
           ],
-          "x": 1524.78930703125,
-          "y": 583.834,
+          "x": 1524.87080703125,
+          "y": 600.7987,
           "direction": "right"
         },
         "constraintName": "fk_users_to_merchants",
@@ -1657,8 +1680,8 @@
           "columnIds": [
             "6ea9e7ff-b819-4331-a535-6e1c9c64c799"
           ],
-          "x": 2115.1378,
-          "y": 678.8335,
+          "x": 2115.1369,
+          "y": 694.8341,
           "direction": "left"
         },
         "end": {
@@ -1666,8 +1689,8 @@
           "columnIds": [
             "98892484-f125-48b7-bf4b-f9e523c1aa0e"
           ],
-          "x": 1524.78930703125,
-          "y": 679.834,
+          "x": 1524.87080703125,
+          "y": 696.7987,
           "direction": "right"
         },
         "constraintName": "fk_schools_to_merchants",
@@ -1683,8 +1706,8 @@
           "columnIds": [
             "a371f0ba-e49c-46f4-b141-dd81263cbc94"
           ],
-          "x": 2648.9116,
-          "y": 1379.8567,
+          "x": 2631.308,
+          "y": 1370.0314,
           "direction": "left"
         },
         "end": {
@@ -1692,8 +1715,8 @@
           "columnIds": [
             "90242727-edde-4e48-aaa1-b2a5d457553b"
           ],
-          "x": 2484.26708203125,
-          "y": 1380.5542,
+          "x": 2486.33158203125,
+          "y": 1371.4435,
           "direction": "right"
         },
         "constraintName": "fk_member_roles_to_members",
@@ -1709,8 +1732,8 @@
           "columnIds": [
             "24b93482-2ae5-467a-966e-32e993064f8d"
           ],
-          "x": 1135.7771,
-          "y": 631.834,
+          "x": 1135.8586,
+          "y": 648.7987,
           "direction": "left"
         },
         "end": {
@@ -1718,13 +1741,39 @@
           "columnIds": [
             "b5953cb2-2186-4068-b058-240a771303ec"
           ],
-          "x": 990.73601640625,
-          "y": 630.9163,
+          "x": 1005.58161640625,
+          "y": 648.8335,
           "direction": "right"
         },
         "constraintName": "fk_merchants_to_products",
         "visible": true,
         "id": "d892ec08-a4dc-4987-ad9b-1a444ea161b5"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "d92d06c5-c266-4508-a54b-100cc1784015",
+          "columnIds": [
+            "6ea9e7ff-b819-4331-a535-6e1c9c64c799"
+          ],
+          "x": 2115.1369,
+          "y": 566.8341,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "450dfa4c-9d8f-4f39-be56-832c34abfea2",
+          "columnIds": [
+            "b5dd2ab0-c7cc-4b9b-a56b-8f3c4848e9cf"
+          ],
+          "x": 2009.0797265625,
+          "y": 300.711,
+          "direction": "right"
+        },
+        "constraintName": "fk_schools_to_transactions",
+        "visible": true,
+        "id": "a6fdb233-71a2-4582-ba04-3f791799a15c"
       }
     ]
   }
