@@ -10,6 +10,11 @@ class Transaction extends Model
 {
     use HasFactory;
 
+    protected $appends  = [
+        'status_name',
+        'type_name',
+    ];
+
     protected $casts    = [
         'detail'    => 'object',
     ];
