@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
+use App\Models\{MemberRole, School, User};
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -17,7 +17,11 @@ class MemberSeeder extends Seeder
             'password'  => Hash::make('password'),
         ]);
 
-        $user->member()->create();
+        $user->member()->create([
+            'school_id' => School::first()->id,
+            'role_id'   => MemberRole::find(1)->id,
+        ]);
+
         $user->tokens()->create([
             'name'      => 'user',
             'abilities' => ['*'],
