@@ -23,6 +23,7 @@ class UserResource extends JsonResource
             'created_at'    => $this->created_at,
             'updated_at'    => $this->updated_at,
             'school'        => SchoolResource::make($this->whenLoaded('school')),
+            'member'        => MemberResource::make($this->whenLoaded('member')),
         ];
     }
 }
