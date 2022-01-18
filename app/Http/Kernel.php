@@ -61,6 +61,7 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'member.api' => \App\Http\Middleware\Api\IsMember::class,
+        'merchant.api' => \App\Http\Middleware\Api\IsMerchant::class,
         'password.confirm' => \Illuminate\Auth\Middleware\RequirePassword::class,
         'school.api' => \App\Http\Middleware\Api\IsSchool::class,
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
