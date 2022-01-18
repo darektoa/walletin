@@ -21,6 +21,6 @@ Route::middleware(['auth.api'])->group(function() {
 
     // MEMBER
     Route::prefix('/member')->group(function() {
-        Route::post('/create', [MemberControler::class, 'store']);
+        Route::post('/join', [MemberControler::class, 'store']);
     });
 });
