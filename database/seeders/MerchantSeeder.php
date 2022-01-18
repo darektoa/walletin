@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
+use App\Models\{School, User};
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -17,7 +17,10 @@ class MerchantSeeder extends Seeder
             'password'  => Hash::make('password'),
         ]);
 
-        $user->merchant()->create();
+        $user->merchant()->create([
+            'school_id' => School::first()->id,
+        ]);
+
         $user->tokens()->create([
             'name'      => 'user',
             'abilities' => ['*'],
