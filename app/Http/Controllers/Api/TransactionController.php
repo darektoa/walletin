@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Exceptions\ErrorException as Error;
 use App\Helpers\ResponseHelper;
 use App\Http\Controllers\Controller;
-use App\Models\Transaction;
+use App\Models\{Transaction, User};
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -22,8 +22,12 @@ class TransactionController extends Controller
                 throw new Error('Unprocessable', 422, $errors);
             }
 
+            $user = User::with(['member.school'])
+                ->find(auth()->id());
+
             $transaction = Transaction::create([
-                'receiver_id'   => auth()->id(),
+                'receiver_id'   => $user->id,
+                'school_id'     => $user->member->school->id,
                 'amount'        => $request->amount,
                 'status'        => 1, // Pending
                 'type'          => 1, // Topup
