@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 trait RequestValidator{
-    protected function validate(
+    public function validate(
         Request $request,
         array $rules,
         array $message=[],
