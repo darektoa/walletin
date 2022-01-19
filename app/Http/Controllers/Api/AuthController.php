@@ -7,23 +7,21 @@ use App\Helpers\{ResponseHelper, UsernameHelper};
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Http\Resources\UserResource;
+use App\Traits\Api\RequestValidator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\{Auth, Hash, Validator};
 
 class AuthController extends Controller
 {
+    use RequestValidator;
+
     public function register(Request $request) {
         try{
-            $validator  = Validator::make($request->all(), [
+            $this->validate($request, [
                 'name'      => 'required|min:3|max:40',
                 'email'     => 'required|email|unique:users,email',
                 'password'  => 'required|min:8|max:20'
             ]);
-
-            if($validator->fails()) {
-                $errors = $validator->errors()->all();
-                throw new Error('Invalid field', 422, $errors);
-            }
 
             $user = User::create([
                 'name'      => $request->name,
