@@ -17,6 +17,7 @@ class CreateMerchantsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->foreignId('school_id')->constrained();
+            $table->bigInteger('balance')->default(0);
             $table->string('description')->nullable();
             $table->timestamps();
         });
