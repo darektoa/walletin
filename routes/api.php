@@ -19,6 +19,7 @@ Route::middleware(['auth.api'])->group(function() {
         Route::post('/create', [SchoolController::class, 'store']);
         
         Route::middleware(['school.api'])->group(function() {
+            Route::get('/members', [SchoolMemberController::class, 'index']); 
             Route::get('/transactions', [SchoolTransactionController::class, 'index']); 
         });
     });
