@@ -19,6 +19,7 @@ class CreateMembersTable extends Migration
             $table->foreignId('school_id')->constrained();
             $table->foreignId('role_id')->constrained('member_roles');
             $table->bigInteger('balance')->default(0);
+            $table->softDeletes();
             $table->timestamps();
         });
     }
