@@ -16,15 +16,18 @@ Route::prefix('auth')->group(function() {
 Route::middleware(['auth.api'])->group(function() {
     // SCHOOL
     Route::prefix('/school')->group(function() {
-        Route::get('/transactions', [SchoolTransactionController::class, 'index']);
         Route::post('/create', [SchoolController::class, 'store']);
+        
+        Route::middleware(['school.api'])->group(function() {
+            Route::get('/transactions', [SchoolTransactionController::class, 'index']); 
+        });
     });
 
     // MEMBER
     Route::prefix('/member')->group(function() {
         Route::post('/join', [MemberControler::class, 'store']);
 
-        Route::middleware('member.api')->group(function() {
+        Route::middleware(['member.api'])->group(function() {
             Route::post('/topup', [TransactionController::class, 'topup']);
         });
     });
