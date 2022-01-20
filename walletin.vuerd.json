@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 4000,
     "height": 4000,
-    "scrollTop": -413,
-    "scrollLeft": -741,
-    "zoomLevel": 0.9,
+    "scrollTop": -774,
+    "scrollLeft": -978,
+    "zoomLevel": 0.7,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -1116,6 +1116,29 @@
             "id": "ec697b92-020e-4716-9c2d-24bd48009367"
           },
           {
+            "name": "status",
+            "comment": "",
+            "dataType": "SMALLINT(6)",
+            "default": "1",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 81.4599609375,
+              "widthDefault": 60
+            },
+            "id": "f607ee47-272a-4a76-b296-d6221a0bfc54"
+          },
+          {
             "name": "created_at",
             "comment": "",
             "dataType": "TIMESTAMP",
@@ -1164,9 +1187,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1133.6364,
-          "top": 538.2988,
-          "zIndex": 10,
+          "left": 1136.7475,
+          "top": 524.0767,
+          "zIndex": 28,
           "widthName": 62.68994140625,
           "widthComment": 60
         },
@@ -1495,9 +1518,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 610.0948,
-          "top": 527.8335,
-          "zIndex": 6,
+          "left": 612.0948,
+          "top": 524.8335,
+          "zIndex": 26,
           "widthName": 113.28076171875,
           "widthComment": 60
         },
@@ -1686,8 +1709,8 @@
           "columnIds": [
             "7afcaa2d-dfc9-4450-9d3f-d278b2b42c44"
           ],
-          "x": 1522.64860703125,
-          "y": 591.4238,
+          "x": 1525.75970703125,
+          "y": 582.3267,
           "direction": "right"
         },
         "constraintName": "fk_users_to_merchants",
@@ -1712,8 +1735,8 @@
           "columnIds": [
             "98892484-f125-48b7-bf4b-f9e523c1aa0e"
           ],
-          "x": 1522.64860703125,
-          "y": 697.6738,
+          "x": 1525.75970703125,
+          "y": 698.8267,
           "direction": "right"
         },
         "constraintName": "fk_schools_to_merchants",
@@ -1755,8 +1778,8 @@
           "columnIds": [
             "24b93482-2ae5-467a-966e-32e993064f8d"
           ],
-          "x": 1133.6364,
-          "y": 644.5488,
+          "x": 1136.7475,
+          "y": 640.5767,
           "direction": "left"
         },
         "end": {
@@ -1764,8 +1787,8 @@
           "columnIds": [
             "b5953cb2-2186-4068-b058-240a771303ec"
           ],
-          "x": 1005.58161640625,
-          "y": 644.3335,
+          "x": 1007.58161640625,
+          "y": 641.3335,
           "direction": "right"
         },
         "constraintName": "fk_merchants_to_products",
