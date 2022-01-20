@@ -18,6 +18,7 @@ class MerchantResource extends JsonResource
             'id'            => $this->id,
             'balance'       => $this->balance,
             'description'   => $this->description,
+            'status'        => StatusResource::make($this),
             'created_at'    => $this->created_at,
             'school'        => SchoolResource::make($this->whenLoaded('school')),
             'products'      => MerchantProductResource::make($this->whenLoaded('products')),
