@@ -14,6 +14,10 @@ class UserResource extends JsonResource
      */
     public function toArray($request)
     {
+        $school     = $this->whenLoaded('school');
+        $member     = $this->whenLoaded('member');
+        $merchant   = $this->whenLoaded('merchant');
+
         return [
             'id'            => $this->id,
             'token'         => $this->when($this->token, $this->token),
@@ -22,9 +26,9 @@ class UserResource extends JsonResource
             'email'         => $this->email,
             'created_at'    => $this->created_at,
             'updated_at'    => $this->updated_at,
-            'school'        => SchoolResource::make($this->whenLoaded('school')),
-            'member'        => MemberResource::make($this->whenLoaded('member')),
-            'merchant'      => MerchantResource::make($this->whenLoaded('merchant')),
+            'school'        => SchoolResource::make($this->when($school, $school)),
+            'member'        => MemberResource::make($this->when($member, $member)),
+            'merchant'      => MerchantResource::make($this->when($merchant, $merchant)),
         ];
     }
 }
