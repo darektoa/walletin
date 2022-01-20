@@ -38,4 +38,9 @@ Route::middleware(['auth.api'])->group(function() {
     Route::prefix('/merchant')->group(function() {
         Route::post('/create', [MerchantController::class, 'store']);
     });
+
+    // PROFILE
+    Route::prefix('/profile')->group(function() {
+        Route::get('/', [ProfileController::class, 'index']);
+    });
 });
