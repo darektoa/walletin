@@ -16,7 +16,7 @@ Route::prefix('auth')->group(function() {
 Route::middleware(['auth.api'])->group(function() {
     // SCHOOL
     Route::prefix('/school')->group(function() {
-        Route::get('/transactions', [SchoolController::class, 'indexTransaction']);
+        Route::get('/transactions', [SchoolTransactionController::class, 'index']);
         Route::post('/create', [SchoolController::class, 'store']);
     });
 
