@@ -28,4 +28,9 @@ Route::middleware(['auth.api'])->group(function() {
             Route::post('/topup', [TransactionController::class, 'topup']);
         });
     });
+
+    // MERCHANT
+    Route::prefix('/merchant')->group(function() {
+        Route::post('/create', [MerchantController::class, 'store']);
+    });
 });
