@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 4000,
     "height": 4000,
-    "scrollTop": -893,
-    "scrollLeft": -1544,
-    "zoomLevel": 0.8,
+    "scrollTop": -379,
+    "scrollLeft": -458,
+    "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -1212,7 +1212,7 @@
           "active": false,
           "left": 1136.7475,
           "top": 524.0767,
-          "zIndex": 28,
+          "zIndex": 42,
           "widthName": 62.68994140625,
           "widthComment": 60
         },
@@ -1424,6 +1424,29 @@
             "id": "63e9a0ae-c511-4a47-aea6-b44d03e98ce3"
           },
           {
+            "name": "code",
+            "comment": "",
+            "dataType": "CHAR(20)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 61.95361328125,
+              "widthDefault": 60
+            },
+            "id": "d021d827-f833-40a2-9fef-056c4f43612f"
+          },
+          {
             "name": "price",
             "comment": "",
             "dataType": "BIGINT(20)",
@@ -1540,10 +1563,10 @@
           }
         ],
         "ui": {
-          "active": false,
-          "left": 612.0948,
-          "top": 524.8335,
-          "zIndex": 41,
+          "active": true,
+          "left": 614.317,
+          "top": 514.8336,
+          "zIndex": 54,
           "widthName": 113.28076171875,
           "widthComment": 60
         },
@@ -1810,8 +1833,8 @@
           "columnIds": [
             "b5953cb2-2186-4068-b058-240a771303ec"
           ],
-          "x": 1007.58161640625,
-          "y": 641.3335,
+          "x": 1009.80381640625,
+          "y": 641.5836,
           "direction": "right"
         },
         "constraintName": "fk_merchants_to_products",
