@@ -25,4 +25,21 @@ class Merchant extends Model
     public function products() {
         return $this->hasMany(MerchantProduct::class);
     }
+
+
+    public function getStatusNameAttribute() {
+        $status = $this->status;
+        $name   = null;
+
+        switch($status) {
+            case 1: $name = 'Pending'; break;
+            case 2: $name = 'Rejected'; break;
+            case 5: $name = 'Suspended'; break;
+            case 3: $name = 'Closed'; break;
+            case 4: $name = 'Open'; break;
+            default: $name = 'Unknown'; break;
+        }
+
+        return $name;
+    }
 }
